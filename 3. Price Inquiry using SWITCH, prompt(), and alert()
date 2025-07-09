@@ -1,0 +1,43 @@
+console.log("Price List:");
+console.log("A. Pepsi Cola      Php 30.00");
+console.log("B. Coca Cola       Php 35.00");
+console.log("C. Apple (per kg)  Php 100.00");
+console.log("D. Orange (per kg) Php 120.00");
+console.log("E. Hotdogs (per kg) Php 180.00");
+
+let item_Choice = prompt("Enter your item choice (A-E):").toUpperCase();
+let quantity = parseInt(prompt("Enter quantity to order:"));
+
+let price = 0;
+let itemName = "";
+
+switch (item_Choice) {
+  case 'A':
+    price = 30.00;
+    itemName = "Pepsi Cola";
+    break;
+  case 'B':
+    price = 35.00;
+    itemName = "Coca Cola";
+    break;
+  case 'C':
+    price = 100.00;
+    itemName = "Apple";
+    break;
+  case 'D':
+    price = 120.00;
+    itemName = "Orange";
+    break;
+  case 'E':
+    price = 180.00;
+    itemName = "Hotdogs";
+    break;
+  default:
+    alert("Invalid item choice.");
+    break;
+}
+
+if (price > 0) {
+  let total = price * quantity;
+  alert(`You ordered ${quantity} of ${itemName}. Total: Php ${total.toFixed(2)}`);
+}
