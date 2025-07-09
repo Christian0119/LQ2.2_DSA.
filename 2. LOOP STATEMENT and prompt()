@@ -1,0 +1,6 @@
+let dog_breed = prompt("Enter the dog breed:");
+let print_count = parseInt(prompt("How many times do you want to print it?"));
+
+for (let i = 0; i < print_count; i++) {
+  console.log(`${i + 1}: ${dog_breed}`);
+}
